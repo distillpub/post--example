@@ -1,0 +1,27 @@
+{
+	"title": "Distill Example",
+	"description": "An example project using Webpack, Babel, and Svelte.",
+	"password": "svgs",
+	"authors": [
+		{
+			"author": "Ludwig Schubert",
+			"authorURL": "https://schubert.io/",
+			"affiliation": "OpenAI",
+			"affiliationURL": "https://openai.com"
+		}
+	],
+	"katex": {
+		"delimiters": [
+			{
+				"left": "$",
+				"right": "$",
+				"display": false
+			},
+			{
+				"left": "$$",
+				"right": "$$",
+				"display": true
+			}
+		]
+	}
+}

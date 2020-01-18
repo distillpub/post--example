@@ -3,42 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://distill.pub/template.v2.js"></script>
-  <style>
-    <%=require("raw-loader!../static/style.css") %>
+  <style id="distill-article-specific-styles">
+    <%=require("../static/styles.css") %>
   </style>
+  <script src="https://distill.pub/template.v2.js"></script>
 </head>
 
 <body>
 
   <d-front-matter>
-    <script type="text/json">{
-      "title": "Distill Example",
-      "description": "An example project using Webpack, Babel, and Svelte.",
-      "password": "svgs",
-      "authors": [
-        {
-          "author": "Ludwig Schubert",
-          "authorURL": "https://schubert.io/",
-          "affiliation": "OpenAI",
-          "affiliationURL": "https://openai.com"
-        }
-      ],
-      "katex": {
-        "delimiters": [
-          {
-            "left": "$",
-            "right": "$",
-            "display": false
-          },
-          {
-            "left": "$$",
-            "right": "$$",
-            "display": true
-          }
-        ]
-      }
-    }</script>
+    <script type="text/json">
+      <%= JSON.stringify(require("./frontmatter.json"), null, 4) %>
+    </script>
   </d-front-matter>
 
   <d-title>

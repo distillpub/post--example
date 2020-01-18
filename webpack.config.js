@@ -8,7 +8,7 @@ module.exports = {
 		index: "./src/index.js",
 	},
 	resolve: {
-		extensions: [".js", ".html", ".npy", ".json"],
+		extensions: [".js", ".html", ".npy"],
 	},
 	output: {
 		path: __dirname + "/public",
@@ -26,6 +26,10 @@ module.exports = {
 				},
 			},
 			{
+				test: /\.css$/i,
+				use: ["to-string-loader", "css-loader"],
+			},
+			{
 				test: /\.(html|svelte)$/,
 				exclude: /node_modules/,
 				loader: "svelte-loader",
@@ -34,14 +38,6 @@ module.exports = {
 				test: /\.(npy|npc)$/,
 				exclude: /node_modules/,
 				loader: "numpy-loader",
-				options: {
-					outputPath: "data/",
-				},
-			},
-			{
-				test: /\.(json)$/,
-				exclude: /node_modules/,
-				loader: "json-loader",
 				options: {
 					outputPath: "data/",
 				},
