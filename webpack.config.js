@@ -8,7 +8,7 @@ module.exports = {
 		index: "./src/index.js",
 	},
 	resolve: {
-		extensions: [".js", ".html", ".npy"],
+		extensions: [".mjs", ".js", ".html", ".npy"],
 	},
 	output: {
 		path: __dirname + "/public",
