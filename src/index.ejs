@@ -203,16 +203,19 @@
 
     <d-code block="" language="javascript">
       var x = 25;
-      function(x){
-      return x * x;
+      function square(x) {
+        return x * x;
       }
     </d-code>
     <p>We also support some highlighting.</p>
     <d-code block="" language="python">
       # Python 3: Fibonacci series up to n
       def fib(n):
-      a, b = 0, 1
-      while a &lt; n: print(a, end=' ' ) a, b=b, a+b </d-code>
+        a, b = 0, 1
+        while a &lt; n:
+          print(a, end=' ')
+          a, b = b, a+b
+    </d-code>
 
     <h4>Tables</h4>
     <p>We have simple tables that try to stay readable at most screen sizes:
